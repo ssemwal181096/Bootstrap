@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Flexbox</title>
+    <style>
+      body{
+        background-color: gainsboro;
+      }
+      section{
+        width: 100%;
+        padding: 100px 0px;;
+      }
+      .common-heading{
+        color: #313642; font-weight: 600;
+      }
+      .grid-flex {
+      background-color: #fff;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      flex-direction: row;
+      -webkit-flex-direction: row;
+      -webkit-flex-wrap: wrap;
+      -webkit-justify-content: space-around;
+      }
+      .flex-img1{
+        background-image: url(images/gallery/Img2.jpg);
+      }
+      .flex-img2{
+        background-image: url(images/gallery/Img3.jpg);
+      }
+      .flex-img3{
+        background-image: url(images/gallery/Img4.jpg);
+      }
+      .flex-img4{
+        background-image: url(images/gallery/Img7.jpg);
+      }
+      .col {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      }
+      .col-left {
+      -webkit-box-ordinal-group:-1;
+      -webkit-order: -1;
+      -ms-flex-order: -1;
+      order: -1;
+      }
+      .col-text{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height:20em;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      }
+      .Aligner-item {
+      width: 100%;
+      }
+      .flex-heading{
+        text-align: center;
+      }
+      .flex-description{
+        text-align: justify;
+      }
+      .col-image {
+      background-size: cover;
+      background-position:center center;
+      }
+
+      @media (max-width: 640px) {
+        .grid-flex {
+          height: 50em;
+          display: -webkit-flex;
+          -webkit-flex-direction: column;
+          flex-direction: column;
+         }
+        .col {
+          order:vertical;
+        }
+        .col-left {
+          -webkit-box-ordinal-group:0;
+          -webkit-order: 0;
+          -ms-flex-order: 0;
+          order: 0;
+        }
+        .col-text div p {
+          padding: 0;
+        }
+        .Aligner-item {
+          width: 100%;
+          text-align: justify;
+        }
+        .flex-heading{
+          margin-top:20px;
+        }
+        .flex-description{
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="grey-bg" id="flex">
+      <div class="container clearfix">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="common-heading">
+              <h1 class="text-center"> Flexbox </h1>
+              <p class="text-center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-flex mt-5">
+          <div class="col col-image flex-img1"></div>
+          <div class="col col-text">
+            <div class="Aligner-item">
+              <h4 class="flex-heading"> HEADING 1 </h4>
+              <p class="flex-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-flex">
+          <div class="col col-image flex-img2">&nbsp;</div>
+          <div class="col col-text col-left">
+            <div class="Aligner-item">
+              <h4 class="flex-heading"> HEADING 2 </h4>
+              <p class="flex-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-flex">
+          <div class="col col-image flex-img3">&nbsp;</div>
+          <div class="col col-text">
+            <div class="Aligner-item">
+              <h4 class="flex-heading"> HEADING 3 </h4>
+              <p class="flex-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-flex">
+          <div class="col col-image flex-img4">&nbsp;</div>
+          <div class="col col-text col-left">
+            <div class="Aligner-item">
+              <h4 class="flex-heading"> HEADING 4 </h4>
+              <p class="flex-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

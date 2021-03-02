@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Image Overlay</title>
+    <style>
+      .overlay-img{
+        width:100%;
+        height: auto
+      }
+      .overlay{
+        position: relative;
+      }
+      .overlay::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+        opacity: 0.9;
+      }
+      .centered {
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .caption-title{
+        color:#fff;
+        text-align: center;
+      }
+      .caption-description{
+        color:#fff;
+        text-align: center;
+      }
+
+      /* changes only in desktop view */
+      @media screen and (min-width: 800px) {
+        .caption-title{
+          font-size: 5.5rem;
+        }
+        .caption-description{
+          font-size: 1.5rem;
+        }
+      }
+      /* changes only in desktop view */
+
+      /* Device = Small devices
+         Screen = B/w 280px to 315px */
+      @media (min-width: 280px) and (max-width: 319px) {
+        .centered {
+          width:100%;
+          top:10%;
+        }
+      }
+
+      /* Device = All mobile phones, smartphones
+         Screen = B/w 320px to 640px */
+      @media (min-width: 320px) and (max-width: 640px) {
+        .centered {
+          width:100%;
+          top:20%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid" style="padding-left:0px;padding-right:0px;">
+      <div class="overlay">
+        <img class="overlay-img" src="images/banner/banner.jpg" alt="banner">
+      </div>
+      <div class="centered">
+        <h1 class="caption-title">Caption Title</h1>
+        <p class="caption-description">Lorem ipsum dolor consectetur adipiscing eiusmod tempor incididunt.</p>
+      </div>
+    </div>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

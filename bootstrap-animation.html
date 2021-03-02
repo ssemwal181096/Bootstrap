@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap Animation</title>
+    <style>
+      body{
+        background-color: gainsboro;
+      }
+      .col-md-4{
+        background-color: #fff;
+        padding:30px;
+        text-align:center;
+      }
+
+      /* Bootstrap animation */
+      .animated{
+        visibility:visible;
+        animation-fill-mode:both;
+        animation-duration:2s;
+        animation-play-state:running;
+      }
+      .animatable{
+        visibility:hidden;
+        animation-play-state:paused;
+      }
+      @-webkit-keyframes bounceInLeft{
+        0%{
+          opacity:0;
+          transform:translateX(-2000px);
+        }
+        60%{
+          transform:translateX(20px);
+        }
+        80%{
+          transform:translateX(-5px);
+        }
+        100%{
+          opacity:1;
+          transform:translateX(0);
+        }
+      }
+
+      @-webkit-keyframes bounceInRight{
+        0%{
+          opacity:0;
+          transform:translateX(2000px);
+        }
+        60%{
+          transform:translateX(-20px);
+        }
+        80%{
+          transform:translateX(5px);
+        }
+        100%{
+          opacity:1;
+          transform:translateX(0);
+        }
+      }
+
+      @-webkit-keyframes fadeInUp{
+        0%{
+        opacity:0;
+        transform:translateY(20px);
+        }
+        100%{
+          opacity:1;
+          transform:translateY(0);
+        }
+      }
+
+      @-webkit-keyframes fadeInDown{
+        0%{
+          opacity:0;
+           transform:translateY(-20px);
+         }
+        100%{
+          opacity:1;
+          transform:translateY(0);
+        }
+      }
+
+      @-webkit-keyframes bounceIn{
+        0%{
+          opacity:0;
+           transform:scale(.3);
+         }
+        50%{
+          transform:scale(1.05);
+        }
+        70%{
+          transform:scale(.9);
+        }
+        100%{
+          opacity:1;
+          transform:scale(1);
+        }
+      }
+
+      @-webkit-keyframes fadeIn{
+        0%{
+          opacity:0;
+        }
+        20%{
+          opacity:0;
+        }
+        100%{
+          opacity:1;
+        }
+      }
+
+      @-webkit-keyframes fadeBgColor{
+        0%{
+          background:none;
+        }
+        70%{
+          background:none;
+        }
+        100%{
+          background:#464646;
+        }
+      }
+
+      @-webkit-keyframes moveUp{
+        0%{
+          opacity:1;
+          transform:translateY(40px);
+        }
+        100%{
+          opacity:1;
+          transform:translateY(0);
+        }
+      }
+
+      .animated.animationDelay{
+        animation-delay:.4s;
+      }
+      .animated.animationDelayMed{
+        animation-delay:1.2s;
+      }
+      .animated.animationDelayLong{
+        animation-delay:1.6s;
+      }
+      .animated.bounceInLeft{
+        animation-name:bounceInLeft;
+      }
+      .animated.bounceInRight{
+        animation-name:bounceInRight;
+      }
+      .animated.fadeInUp{
+        animation-name:fadeInUp;
+      }
+      .animated.fadeInDown{
+        animation-name:fadeInDown;
+      }
+      .animated.fadeIn{
+        animation-name:fadeIn;
+      }
+      .animated.moveUp{
+        animation-name:moveUp;
+      }
+      .animated.bounceIn{
+        animation-name:bounceIn;
+      }
+      .animated.fadeBgColor{
+        animation-name:fadeBgColor;
+      }
+      /* /Bootstrap animation*/
+    </style>
+  </head>
+  <body>
+    <!-- Note: Class "animated" for top-area content that does not need to be scroll -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4 offset-md-1 animated bounceInLeft">
+          <h1>BounceInLeft</h1>
+        </div>
+        <div class="col-md-4 offset-md-1 animated bounceInRight">
+          <h1>BounceInRight</h1>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-4 offset-md-1 animated fadeInUp">
+          <h1>FadeInUp</h1>
+        </div>
+        <div class="col-md-4 offset-md-1 animated fadeInDown">
+          <h1>FadeInDown</h1>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-4 offset-md-1 animated fadeIn">
+          <h1>FadeIn</h1>
+        </div>
+        <div class="col-md-4 offset-md-1 animated moveUp">
+          <h1>MoveUp</h1>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-4 offset-md-1 animated bounceIn">
+          <h1>BounceIn</h1>
+        </div>
+        <div class="col-md-4 offset-md-1 animated fadeBgColor">
+          <h1>FadeBgColor</h1>
+        </div>
+      </div>
+    </div>
+
+    </br></br></br><hr>
+
+    <!-- Note: Class "animatable" for bottom-area content that needs to be scroll -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4 offset-md-1 animatable bounceInLeft">
+          <h1>BounceInLeft</h1>
+        </div>
+        <div class="col-md-4 offset-md-1 animatable bounceInRight">
+          <h1>BounceInRight</h1>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-4 offset-md-1 animatable fadeInUp">
+          <h1>FadeInUp</h1>
+        </div>
+        <div class="col-md-4 offset-md-1 animatable fadeInDown">
+          <h1>FadeInDown</h1>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-4 offset-md-1 animatable fadeIn">
+          <h1>FadeIn</h1>
+        </div>
+        <div class="col-md-4 offset-md-1 animatable moveUp">
+          <h1>MoveUp</h1>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-4 offset-md-1 animatable bounceIn">
+          <h1>BounceIn</h1>
+        </div>
+        <div class="col-md-4 offset-md-1 animatable fadeBgColor">
+          <h1>FadeBgColor</h1>
+        </div>
+      </div>
+    </div>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    // Bootstrap animation
+    $(document).ready(function($){
+      // Function which adds the 'animated' class to any '.animatable' in view
+      var doAnimations = function(){
+        // Calc current offset and get all animatables
+        var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+        // Unbind scroll handler if we have no animatables
+        if ($animatables.length == 0){
+          $(window).off('scroll', doAnimations);
+        }
+        // Check all animatables and animate them if necessary
+        $animatables.each(function(i){
+          var $animatable = $(this);
+          if(($animatable.offset().top + $animatable.height() - 20) < offset){
+            $animatable.removeClass('animatable').addClass('animated');
+          }
+        });
+      };
+      // Hook doAnimations on scroll, and trigger a scroll
+      $(window).on('scroll', doAnimations);
+      $(window).trigger('scroll');
+    });
+    </script>
+  </body>
+</html>

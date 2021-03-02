@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Image Hover</title>
+    <style>
+      body{
+        background-color: gainsboro;
+      }
+      .hover-img{
+          width:100%;
+        }
+      .gallery {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      /* Zoom In #1 */
+      .effect-1 img {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+      }
+      .effect-1:hover img {
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3);
+      }
+
+      /* Zoom Out #1 */
+      .effect-2 img {
+      	-webkit-transform: scale(1.5);
+      	transform: scale(1.5);
+      	-webkit-transition: .3s ease-in-out;
+      	transition: .3s ease-in-out;
+      }
+      .effect-2:hover img {
+      	-webkit-transform: scale(1);
+      	transform: scale(1);
+      }
+
+      /* Gray Scale */
+      .effect-3 img {
+      	-webkit-filter: grayscale(100%);
+      	filter: grayscale(100%);
+      	-webkit-transition: .3s ease-in-out;
+      	transition: .3s ease-in-out;
+      }
+      .effect-3:hover img {
+      	-webkit-filter: grayscale(0);
+      	filter: grayscale(0);
+      }
+
+      /* Opacity #1 */
+      .effect-4 img {
+      	opacity: 1;
+      	-webkit-transition: .3s ease-in-out;
+      	transition: .3s ease-in-out;
+      }
+      .effect-4:hover img {
+      	opacity: .5;
+      }
+
+      /* Flashing */
+      .effect-5:hover img {
+      	opacity: 1;
+      	-webkit-animation: flash 1.5s;
+      	animation: flash 1.5s;
+      }
+      @-webkit-keyframes flash {
+      	0% {
+      		opacity: .4;
+      	}
+      	100% {
+      		opacity: 1;
+      	}
+      }
+      @keyframes flash {
+      	0% {
+      		opacity: .4;
+      	}
+      	100% {
+      		opacity: 1;
+      	}
+      }
+
+      /* Shine */
+      .effect-6 {
+      	position: relative;
+      }
+      .effect-6::before {
+      	position: absolute;
+      	top: 0;
+      	left: -75%;
+      	z-index: 2;
+      	display: block;
+      	content: '';
+      	width: 50%;
+      	height: 100%;
+      	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+      	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+      	-webkit-transform: skewX(-25deg);
+      	transform: skewX(-25deg);
+      }
+      .effect-6:hover::before {
+      	-webkit-animation: shine .75s;
+      	animation: shine .75s;
+      }
+      @-webkit-keyframes shine {
+      	100% {
+      		left: 125%;
+      	}
+      }
+      @keyframes shine {
+      	100% {
+      		left: 125%;
+      	}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-4 gallery effect-1">
+          <img class="hover-img" src="images/gallery/img1.jpg">
+        </div>
+        <div class="col-md-4 gallery effect-2">
+          <img class="hover-img" src="images/gallery/img3.jpg">
+        </div>
+        <div class="col-md-4 gallery effect-3">
+          <img class="hover-img" src="images/gallery/img4.jpg">
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-4 gallery effect-4">
+          <img class="hover-img" src="images/gallery/img7.jpg">
+        </div>
+        <div class="col-md-4 gallery effect-5">
+          <img class="hover-img" src="images/gallery/img9.jpg">
+        </div>
+        <div class="col-md-4 gallery effect-6">
+          <img class="hover-img" src="images/gallery/img1.jpg">
+        </div>
+      </div>
+    </div>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

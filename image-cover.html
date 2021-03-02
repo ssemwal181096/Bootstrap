@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Image Cover</title>
+    <style>
+      body{
+        background-color: gainsboro;
+      }
+      /*  mobile responsive - position center */
+      .col-md-4{
+        margin: 0 auto;
+        text-align: center;
+      }
+      /* mobile responsive - position center */
+
+      .image-cover{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center right;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <!-- mb-4 - mobile responsive -->
+        <div class="col-md-4 mb-4">
+          <img class="image-cover" src="images/gallery/img1.jpg">
+        </div>
+        <div class="col-md-4 mb-4">
+          <img class="image-cover" src="images/gallery/img2.jpg">
+        </div>
+        <div class="col-md-4 mb-4">
+          <img class="image-cover" src="images/gallery/img3.jpg">
+        </div>
+      </div>
+    </div>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

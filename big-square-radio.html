@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Radio Button Big Square</title>
+    <style>
+      body{
+        background-color: gainsboro;
+      }
+      .selectable-label{
+        padding-left:5px;
+      }
+      .square-radio input[type="radio"] {
+        display: none;
+      }
+      .square-radio input[type="radio"]:checked + .radio-box {
+        background-color: #007e90;
+      }
+      .square-radio input[type="radio"]:checked + .radio-box span {
+        color: white;
+        transform: translateY(70px);
+      }
+      .square-radio input[type="radio"]:checked + .radio-box span:before {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+      .square-radio .radio-box {
+        width: 140px;
+        height: 80px;
+        background-color: #aaa;
+        transition: all 250ms ease;
+        will-change: transition;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        font-weight: 500;
+      }
+      .square-radio .radio-box:active {
+        transform: translateY(10px);
+      }
+      .square-radio .radio-box .select-span-Catagories {
+        position: absolute;
+        transform: translate(0, 70px);
+        left: 0;
+        right: 0;
+        bottom: 92px;
+        transition: all 300ms ease;
+        font-size: 1.3em;
+        user-select: none;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-8 offset-md-2 square-radio">
+          <h2 class="mt-3 mb-4">Catagories</h2>
+          <label class="selectable-label">
+            <input type="radio" name="catagory" checked>
+            <div class="radio-box">
+              <span class="select-span-Catagories">Cat1</span>
+            </div>
+          </label>
+          <label class="selectable-label">
+            <input type="radio" name="catagory">
+            <div class="radio-box">
+              <span class="select-span-Catagories">Cat2</span>
+            </div>
+          </label>
+          <label class="selectable-label">
+            <input type="radio" name="catagory">
+            <div class="radio-box">
+              <span class="select-span-Catagories">Cat3</span>
+            </div>
+          </label>
+          <label class="selectable-label">
+            <input type="radio" name="catagory">
+            <div class="radio-box">
+              <span class="select-span-Catagories">Cat4</span>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
