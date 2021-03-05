@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Typewriter Effect</title>
+    <style>
+      body{
+        background-color: gainsboro;
+      }
+      .caption-body{
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+      .caption{
+        font-size: 16px;
+        color: #222;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0 auto;
+        animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+      }
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-lg-6 offset-lg-3 caption-body">
+          <h1 class="caption">Lorem ipsum dolor consectetur adipiscing eiusmod tempor incididunt.</h1>
+        </div>
+      </div>
+    </div>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
