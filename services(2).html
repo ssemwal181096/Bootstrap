@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <title>Service</title>
+    <style>
+    @import url("https://fonts.googleapis.com/css?family=Rajdhani:500,700&display=swap");
+      body{
+        font-family: "Rajdhani", sans-serif !important;
+        background-color: gainsboro;
+      }
+      #service{
+        padding: 50px 60px 50px 60px;
+        background-color: #fff;
+      }
+      .service-heading{
+        font-size: 25px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 600;
+      }
+      .service-img{
+        width:100%;
+        border-radius: 5px;
+      }
+      .service-title{
+        position: relative;
+        color:inherit;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+      .service-title:hover{
+        text-decoration: none;
+      }
+      .service-title:before, .service-title:after {
+        content: '';
+        position: absolute;
+        transition: transform .5s ease;
+      }
+      .link-hover-effect {
+        padding-top: 10px;
+      }
+      .link-hover-effect:before {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #007bff;
+        transform: scaleX(0);
+      }
+      .link-hover-effect:hover:before {
+        transform: scaleX(1);
+      }
+      .service-description{
+        text-align: justify;
+      }
+      /* changes only in desktop view */
+      @media screen and (min-width: 800px) {
+        .service-img{
+          width:130px;
+          height:100px;
+        }
+      }
+      /* changes only in desktop view */
+    </style>
+  </head>
+  <body>
+    <!-- links -->
+    <div class="container mt-5" id="service">
+      <h5 class="service-heading">Services</h5>
+      <div class="row mt-5">
+        <div class="col-lg-2">
+          <img class="service-img" src="http://demo.interface.club/limitless/demo/Template/global_assets/images/demo/flat/1.png">
+        </div>
+        <div class="col-lg-4">
+          <a class="service-title link-hover-effect" href="">Heading 1</a>
+          <p class="service-description">Lorem ipsum is latin, slightly jumbled, the remnants of a passage from Cicero's 'De finibus bonorum et malorum'
+            1.10.32, which begins...'</p>
+        </div>
+
+        <div class="col-lg-2">
+          <img class="service-img" src="http://demo.interface.club/limitless/demo/Template/global_assets/images/demo/flat/21.png">
+        </div>
+        <div class="col-lg-4">
+          <a class="service-title link-hover-effect" href="">Heading 2</a>
+          <p class="service-description">Lorem ipsum is latin, slightly jumbled, the remnants of a passage from Cicero's 'De finibus bonorum et malorum'
+            1.10.32, which begins...'</p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-2">
+          <img class="service-img" src="http://demo.interface.club/limitless/demo/Template/global_assets/images/demo/flat/12.png">
+        </div>
+        <div class="col-lg-4">
+          <a class="service-title link-hover-effect" href="">Heading 3</a>
+          <p class="service-description">Lorem ipsum is latin, slightly jumbled, the remnants of a passage from Cicero's 'De finibus bonorum et malorum'
+            1.10.32, which begins...'</p>
+        </div>
+
+        <div class="col-lg-2">
+          <img class="service-img" src="http://demo.interface.club/limitless/demo/Template/global_assets/images/demo/flat/15.png">
+        </div>
+        <div class="col-lg-4">
+          <a class="service-title link-hover-effect" href="">Heading 4</a>
+          <p class="service-description">Lorem ipsum is latin, slightly jumbled, the remnants of a passage from Cicero's 'De finibus bonorum et malorum'
+            1.10.32, which begins...'</p>
+        </div>
+      </div>
+    </div>
+    <!-- links -->
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
