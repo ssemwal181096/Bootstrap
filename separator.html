@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Separator</title>
+    <style>
+      body{
+        background-color: gainsboro;
+      }
+      .theme{
+        color:#c4933a;
+      }
+      /* separator line */
+      .separator {
+          position: relative;
+          display: inline-block;
+          text-transform: capitalize;
+          margin-bottom: 30px;
+          margin-left: 50%;
+      }
+      .separator:after,
+      .separator:before {
+          position: absolute;
+          content: "";
+          width: 80px;
+          height: 2px;
+          background:#c4933a;
+          top: 50%;
+      }
+      .separator:after {
+          right: 140%;
+      }
+      .separator:before {
+          left: 140%;
+      }
+      /* separator line */
+    </style>
+  </head>
+  <body>
+    <div class="container p-3 mt-5 bg-white">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="display-4 font-weight-bold text-center">Head<span class="theme">ing</span></h1>
+          <div class="separator"></div>
+          <p class="p-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. adipiscing elit, sed do eiusmod tempor incididunt
+              ut labore et dolore magna aliqua exercitation ullamco laboris nisi ut.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
